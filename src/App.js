@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import ReactDOM from 'react-dom';
+import LayoutCom from '@layout/index.js'
+import { LayoutComponent , NotFoundPages} from './router/index.js'
+import { HashRouter as Router, Route, Link, Switch, NavLink, Redirect } from "react-router-dom"  //选择模式可以在引入时设置
+import routeEatch from './utils/routerEatch.js'
+// console.log(LayoutComponent)
+// console.log(routeEatch(LayoutComponent))
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LayoutCom>
+      <Switch>
+        <Redirect from='/' exact to='/user'></Redirect>
+        {routeEatch(LayoutComponent)}
+        <Redirect to="/404"></Redirect>
+      </Switch>
+    </LayoutCom>
+
   );
 }
 
