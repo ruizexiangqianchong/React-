@@ -1,0 +1,52 @@
+json-server:
+查找
+      案例：  http://localhost:3000/musiclist?musicid=553755659
+分页：
+      案例：  http://localhost:3000/musiclist?_page=7
+
+
+
+模拟接口说明
+1：/musiclist：音乐列表数据
+      musicauthor: 歌手名称
+      musicid: 歌曲ID，是唯一的，没有重复性
+      musicimgsrc:歌曲封面地址（图片）
+      musiclistid: 当前歌曲所在网易云的歌单ID
+      musicname: 歌曲名称
+      musicsrc: 歌曲的url
+      musichide: 是否上架歌曲（默认为true），便于在后台中修改
+      musicvip: 歌曲是否为VIP（默认为false），便于在后台中进行修改
+	  playtimes:歌曲播放次数（初始值为0）
+	  userlike：用户收藏次数（初始值为0）
+	  
+2：/songsheet：音乐歌单 
+      songsheetid:歌单id（默认根据当前歌单数量累加）,
+	  songsheetname:歌单名称,
+	  songsheetmd:歌单说明,
+	  songsheettype:歌单类型,（数组）
+	 playtimes:歌曲播放次数（初始值为0）
+	  
+3：/videolist：视频列表
+
+4：/administrators：管理员账户
+      username:账户名称,
+	  password:密码,
+	  type:账户类别(默认0，  管理员类型）
+	  frozen:是否冻结（默认false）
+	  size:null(预留)
+5：/user：用户信息
+      username:账户名称,
+	  password:密码,
+	  phone:手机号
+	  type:账户类别(默认10（用户类型）
+	  vip：是否为VIP（默认false）
+	  frozen:是否冻结(默认false）
+6：/config:网站基本数据配置
+      title:网站名称
+      banner:轮播图
+	   bannerpic：图片地址（网络地址，上传也要上传网络地址）
+	   bannerTitle:"图片说明"
+	   Access:访问量统计
+	   webIntroduction:网站说明
+	   weblogo:网站logo
+      copyright：底部版权
