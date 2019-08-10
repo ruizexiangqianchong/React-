@@ -1,4 +1,4 @@
-json-server:
+﻿json-server:
 查找
       案例：  http://localhost:3000/musiclist?musicid=553755659
 分页：
@@ -31,14 +31,14 @@ json-server:
 4：/administrators：管理员账户
       username:账户名称,
 	  password:密码,
-	  type:账户类别(默认0，  管理员类型）
+	  type:账户类别(默认0，  管理员类型）（1-9留给以后）
 	  frozen:是否冻结（默认false）
 	  size:null(预留)
 5：/user：用户信息
       username:账户名称,
 	  password:密码,
 	  phone:手机号
-	  type:账户类别(默认10（用户类型）
+	  type:账户类别(默认10（普通用户类型）（11：高级会员）（12：高级会员）
 	  vip：是否为VIP（默认false）
 	  frozen:是否冻结(默认false）
 6：/config:网站基本数据配置
@@ -46,7 +46,7 @@ json-server:
       banner:轮播图
 	   bannerpic：图片地址（网络地址，上传也要上传网络地址）
 	   bannerTitle:"图片说明"
-	   Access:访问量统计
-	   webIntroduction:网站说明
-	   weblogo:网站logo
+	Access:访问量统计
+	webIntroduction:网站说明
+	weblogo:网站logo
       copyright：底部版权

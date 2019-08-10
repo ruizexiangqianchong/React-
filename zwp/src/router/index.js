@@ -1,0 +1,101 @@
+import {Login,Music,User,Video,Home,Config,NotFound,Collection,Activity,Collectionmusic,Collectionvideo} from './loadable.js'
+export const LayoutComponent=[
+    {
+        path:"/home",
+        component:Home,
+        meta:{},
+        name:"首页",
+        type:"home",
+        key:"/home",
+    },
+    {
+        path:"/user",
+        component:User,
+        meta:{},
+        name:"用户",
+        type:"user",
+        key:"/user",
+    },
+    {
+        path:"/config",
+        component:Config,
+        meta:{},
+        name:"网站基本信息",
+        type:"setting",
+        key:"/config",
+    },
+    {
+        meta:{},
+        name:"数据采集",
+        type:"reconciliation",
+        children:[
+            {
+                path:"/collection/music",
+                meta:{},
+                component:Collectionmusic,
+                name:"采集音乐",
+                type:"play-square",
+                key:"/collection/music",
+            },
+            {
+                path:"/collection/video",
+                meta:{},
+                type:"customer-service",
+                component:Collectionvideo,
+                name:"采集视频",
+                key:"/collection/video",
+            }
+        ]
+    },
+    {
+        path:"/activity",
+        component:Activity,
+        meta:{},
+        name:"营销管理",
+        type:"gift",
+        key:"/activity",
+    },
+    {
+        meta:{},
+        name:"管理影音",
+        type:"database",
+        children:[
+            {
+                path:"/audioControl/music",
+                meta:{},
+                component:Music,
+                name:"管理音频",
+                type:"play-square",
+                key:"/audioControl/music",
+            },
+            {
+                path:"/audioControl/video",
+                meta:{},
+                type:"customer-service",
+                component:Video,
+                name:"管理视频",
+                key:"/audioControl/video",
+            }
+        ]
+    },
+]
+
+
+export const NoLayoutComponent =[
+    {
+        path:"/login",
+        meta:{},
+        component:Login,
+        name:"登陆",
+        key:"/login",
+    }
+]
+
+export const NotFoundPages=
+    {
+        path:"/404",
+        meta:{},
+        component:NotFound,
+        name:"哦,没有找到页面!",
+        key:"/404",
+    }

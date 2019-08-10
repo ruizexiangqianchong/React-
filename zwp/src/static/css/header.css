@@ -1,0 +1,14 @@
+.index-header {
+  float: right;
+  margin-right: 20px; }
+  .index-header .index-header-user {
+    float: left; }
+  .index-header .index-header-h1 {
+    float: left; }
+
+.home-user {
+  margin-top: 40px;
+  width: 700px;
+  height: 400px; }
+
+/*# sourceMappingURL=header.css.map */
